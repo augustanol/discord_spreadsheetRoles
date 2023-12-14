@@ -62,3 +62,7 @@ def sheet_access():
             print(end='\n')
     except HttpError as error:
         print(error)
+
+
+api_setup()
+sheet_access()
