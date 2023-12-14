@@ -2,11 +2,9 @@ import os
 from dotenv import load_dotenv
 import discord
 from discord.ext import commands
-import asyncio
 
 
-def main():
-
+def bot_setup():
     intents = discord.Intents.all()
 
     client = commands.Bot(command_prefix="?", intents=intents)
@@ -23,6 +21,11 @@ def main():
                 print(f"\nBot z {folder} dodany\n")
 
     client.run(os.getenv("DISCORD_TOKEN"))
+
+
+def main():
+
+    bot_setup()
 
 
 if __name__ == '__main__':
