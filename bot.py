@@ -18,7 +18,7 @@ def bot_setup():
     for folder in os.listdir("modules"):
         if os.path.exists(os.path.join("modules", folder, "cog.py")):
             client.load_extension(f"modules.{folder}.cog")
-            print(f"\nBot z {folder} dodany\n")
+            print(f"\nFunkcje z {folder} dodane")
 
     client.run(os.getenv("DISCORD_TOKEN"))
 
