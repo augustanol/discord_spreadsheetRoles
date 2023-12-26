@@ -3,7 +3,6 @@ from dotenv import load_dotenv
 import nextcord
 from nextcord.ext import commands
 
-
 def bot_setup():
     intents = nextcord.Intents.all()
 
@@ -20,6 +19,7 @@ def bot_setup():
             client.load_extension(f"modules.{folder}.cog")
             print(f"\nBot z {folder} dodany\n")
 
+    #client.run(os.getenv("DISCORD_TOKEN"))
     client.run(os.getenv("DISCORD_TOKEN"))
 
 

@@ -10,10 +10,11 @@ class EasterEggi(commands.Cog, name="Easter Eggi"):
     @commands.command()
     async def silencium(self, ctx: commands.Context):
         await ctx.send("Triplex")
-
+"""
     @commands.command()
     async def jebac(self, ctx: commands.Context):
         await ctx.send("Bravo")
+"""
 
 
 def setup(bot: commands.Bot):
