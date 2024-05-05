@@ -141,6 +141,13 @@ class Role(commands.Cog, name="Role"):
 
         await ctx.send(embed=embed)
 
+    @commands.command()
+    async def printRoles(self, ctx: commands.Context):
+        DiscordRoles = [role.name for role in ctx.guild.roles]
+
+        for role in DiscordRoles:
+            print(role, end='\n')
+
 
 def setup(bot: commands.Bot):
     bot.add_cog(Role(bot))
